@@ -15,12 +15,12 @@ npm install --save missing-person-404
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'missing-person-404'
+import PageNotFound from 'missing-person-404'
 import 'missing-person-404/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <PageNotFound />
   }
 }
 ```
