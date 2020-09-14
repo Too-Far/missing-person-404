@@ -7,7 +7,6 @@ import MissingPersonCard from './components/MissingPersonCard'
 
 
 function PageNotFound () {
-  const randomInt = Math.floor((Math.random() * 300) + 0)
   const [random, setRandom] = useState(Math.floor((Math.random() * 325) +1))
   const [show, setShow] = useState(random + 2)
   const [data, setData] = useState([])
