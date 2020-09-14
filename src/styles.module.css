@@ -1,9 +1,35 @@
-/* add css module styles here (optional) */
-
-.test {
+.header {
   margin: 2em;
   padding: 0.5em;
-  border: 2px solid #000;
   font-size: 2em;
   text-align: center;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.moreBtn {
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 3rem;
+  align-self: flex-end;
+  justify-self: center;
+}
+
+.missingCard {
+  display: flex;
+  justify-content: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  flex: 1;
 }
