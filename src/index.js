@@ -9,7 +9,7 @@ import MissingPersonCard from './components/MissingPersonCard'
 function PageNotFound () {
   const randomInt = Math.floor((Math.random() * 300) + 0)
   const [random, setRandom] = useState(Math.floor((Math.random() * 325) +1))
-  const [show, setShow] = useState(random + 2)
+  const [show, setShow] = useState(2)
   const [data, setData] = useState([])
 
   useEffect(()=>{
@@ -32,7 +32,7 @@ function PageNotFound () {
             <h4>You have reached this page because the page you are looking for does not exist. Instead of giving you  the standard error page, we thought we would use this opportunity to show you some missing persons in the hope that you may have seen one. Every set of eyes helps bring them home!</h4>
           </div>
           <div className={styles.cardContainer}>
-            {data.slice(random ,show).map(item =>
+            {data.slice(0 ,show).map(item =>
             <div className={styles.missingCard}>
             <Paper elevation='20'><MissingPersonCard key={item.id_number} data={item}/>
             </Paper> </div>)}
