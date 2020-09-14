@@ -13,7 +13,7 @@ function MissingPersonCard(props){
             <img src={thumbnail_url} alt={'photograph of ' + { name }} />
             {date_reported !== '' ?
           <h3>My name is {name}. I am a {current_age} year old {ethnicity} {gender}. I was reported missing from {agency_city}, {agency_state} on  {date_reported}.</h3> :
-          <h3>My name is {name}. I am a {current_age} year old {ethnicity} {gender}. I was reported missing from {agency_city}, {agency_state}</h3>}
+          <h3>My name is {name}. I am a {current_age} year old {ethnicity} {gender}. I was reported missing from {agency_city}, {agency_state}.</h3>}
           <h3>Physical Description:</h3>
           <p>{ethnicity} {gender}</p>
           <p>{height} Tall</p>
@@ -28,6 +28,10 @@ function MissingPersonCard(props){
           <h3>{agency_name}</h3></a>)
           : (<h3>{agency_name}</h3>)}
           <div>
+          <div>
+          <h2>Or Call the National Center For Missing & Exploited Children:</h2>
+          <a href='tel:1-800-843-5678'><h3>1-800-THE-LOST</h3></a>
+          </div>
           <Button className={styles.infoBtn} href={link} color='secondary' variant='outlined'>More Information</Button>
           </div>
         </div>
