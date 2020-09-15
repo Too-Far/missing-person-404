@@ -1,10 +1,11 @@
 {
   "name": "missing-person",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple 404 page that displays missing persons data instead of the same ole 404",
   "author": "Too-Far",
   "license": "MIT",
   "repository": "Too-Far/missing-person-404",
+  "homepage": "https://too-far.github.io/missing-person-404/",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
