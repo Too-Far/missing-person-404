@@ -5,6 +5,7 @@
   "author": "Too-Far",
   "license": "MIT",
   "repository": "Too-Far/missing-person-404",
+  "homepage": "https://too-far.github.io/missing-person-404/",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
