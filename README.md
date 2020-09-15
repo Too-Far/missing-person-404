@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save missing-person-404
+npm install --save missing-person
 ```
 
 ## Usage
@@ -24,6 +24,11 @@ class Example extends Component {
   }
 }
 ```
+## For any issues, or for feature requests please reach out to me:
+
+[rdturner40@gmail.com](mailto:rdturner40@gmail.com)
+Git-hub: [Too-Far](https://github.com/Too-Far)
+Repo: [Missing-Person](https://github.com/Too-Far/missing-person-404)
 
 ## License
 
