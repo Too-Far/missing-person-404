@@ -6,6 +6,8 @@
   background-color: #A9A9A9;
   color: white;
   border-radius: 10px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .cardContainer {
@@ -15,7 +17,6 @@
 
 .wrapper {
   text-align: center;
-  border: 14px black solid;
 }
 
 .moreBtn {
@@ -33,4 +34,21 @@
   margin-right: 3rem;
   margin-bottom: 3rem;
   flex: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 1rem;
+  }
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+  .wrapper {
+    border: none;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
 }
