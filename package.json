@@ -1,6 +1,6 @@
 {
   "name": "missing-person",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple 404 page that displays missing persons data instead of the same ole 404",
   "author": "Too-Far",
   "license": "MIT",
