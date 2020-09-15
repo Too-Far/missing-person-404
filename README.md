@@ -15,8 +15,8 @@ npm install --save missing-person
 ```jsx
 import React, { Component } from 'react'
 
-import PageNotFound from 'missing-person-404'
-import 'missing-person-404/dist/index.css'
+import PageNotFound from 'missing-person'
+import 'missing-person/dist/index.css'
 
 class Example extends Component {
   render() {
