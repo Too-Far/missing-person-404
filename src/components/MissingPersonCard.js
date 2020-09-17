@@ -1,14 +1,29 @@
 import React from 'react'
-import styles from './styles.module.css'
+import {makeStyles} from '@material-ui/core/styles'
 import Button from 'material-ui-core/Button'
 
+const useStyles = makeStyles({
+  wrapper: {
+    display: 'flexbox',
+    justifyItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    marginTop: '3rem',
+    paddingBottom: '3rem'
+  },
+  infoBtn: {
+    '':''
+  }
+})
+
 function MissingPersonCard(props){
+    const classes = useStyles()
     const {date_reported, id_number, first_name, last_name, ethnicity, current_age, age_when_missing, gender, height, weight, hair_color, eye_color, circumstances, agency_name, agency_city, agency_state, agency_address, agency_zip, thumbnail_url, case_qr_code, agency_website} = props.data
     const name = `${first_name} ${last_name}`
     const link = `https://www.namus.gov/MissingPersons/Case#/${id_number}?nav`
     // Todo: Figure out a way to improve image loading flow; design cards
     return (
-        <div className={styles.wrapper}>
+        <div className={classes.wrapper}>
           <h1>Please Help Find Me</h1>
             <img src={thumbnail_url} alt={'photograph of ' + { name }} />
             {date_reported !== '' ?
@@ -32,7 +47,7 @@ function MissingPersonCard(props){
           <h2>Or Call the National Center For Missing & Exploited Children:</h2>
           <a href='tel:1-800-843-5678'><h3>1-800-THE-LOST</h3></a>
           </div>
-          <Button className={styles.infoBtn} href={link} color='secondary' variant='outlined'>More Information</Button>
+          <Button className={classes.infoBtn} href={link} color='secondary' variant='outlined'>More Information</Button>
           </div>
         </div>
     )
