@@ -52,7 +52,7 @@ import MissingPersonCard from './components/MissingPersonCard'
 
 function PageNotFound ({child, color, btnColor, btnTxtColor}) {
   const classes = useStyles()
-  const [random, setRandom] = useState(Math.floor((Math.random() * 325) +1))
+  const [random, setRandom] = useState(Math.floor((Math.random() * 40) +1))
   const [show, setShow] = useState(random + 2)
   const [data, setData] = useState([])
   const [childList, setChildList] = useState([])
@@ -70,11 +70,11 @@ function PageNotFound ({child, color, btnColor, btnTxtColor}) {
   let childData = []
   data.map(i=>{
     let age = parseInt(i.age_when_missing, 10)
-    if (age <= 18){
+    if (age < 18){
       childData.push(i)
     }
   })
-
+  alert(childData.length)
     return (
       <ThemeProvider theme={theme}>
       <CssBaseline/>
