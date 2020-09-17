@@ -26,9 +26,9 @@ class Example extends Component {
 
 ## Customizable features:
   To change the background color of the header, buttons and button text:
-    ```jsx
-    <PageNotFound color='desired color value here' btnColor='purple' btnTxtColor='hot pink'>
-    ```
+  ```jsx
+  <PageNotFound color='desired color value here' btnColor='purple' btnTxtColor='hot pink'>
+  ```
   To change search parameters to return children under the age of 18:
   ```jsx
   <PageNotFound child='true'>
