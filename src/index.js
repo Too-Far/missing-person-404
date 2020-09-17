@@ -74,7 +74,6 @@ function PageNotFound ({child, color, btnColor, btnTxtColor}) {
       childData.push(i)
     }
   })
-  alert(childData.length)
     return (
       <ThemeProvider theme={theme}>
       <CssBaseline/>
@@ -95,7 +94,7 @@ function PageNotFound ({child, color, btnColor, btnTxtColor}) {
             </Paper> </div>)}
           </div>
           <div className={classes.moreBtn}>
-      <Button variant='contained' onClick={handleClick} color='primary' style={{backgroundColor: btnColor, color:btnTxtColor}}>Want to See More?</Button>
+      <Button variant='contained' onClick={handleClick} color='primary' className={classes.moreBtn} style={{backgroundColor: btnColor, color:btnTxtColor}}>Want to See More?</Button>
       </div>
     </div>
     </ThemeProvider>

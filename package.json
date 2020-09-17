@@ -1,8 +1,18 @@
 {
   "name": "missing-person",
-  "version": "1.0.4",
+  "version": "1.1.1",
   "description": "A simple 404 page that displays missing persons data instead of the same ole 404",
-  "keywords": ["404", "page Not Found", "Error Page", "Error", "React", "Component","Missing Person", "Missing Persons", "Missing Children"],
+  "keywords": [
+    "404",
+    "page Not Found",
+    "Error Page",
+    "Error",
+    "React",
+    "Component",
+    "Missing Person",
+    "Missing Persons",
+    "Missing Children"
+  ],
   "author": "Too-Far",
   "license": "MIT",
   "repository": "Too-Far/missing-person-404",
