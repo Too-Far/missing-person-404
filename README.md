@@ -29,8 +29,6 @@ class Example extends Component {
     ```jsx
     <PageNotFound color='desired color value here' btnColor='purple' btnTxtColor='hot pink'>
     ```
-## Coming Soon!
-
   To change search parameters to return children under the age of 18:
   ```jsx
   <PageNotFound child='true'>
