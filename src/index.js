@@ -74,7 +74,6 @@ function PageNotFound ({child, color, btnColor, btnTxtColor}) {
       childData.push(i)
     }
   })
-  alert(childData.length)
     return (
       <ThemeProvider theme={theme}>
       <CssBaseline/>
