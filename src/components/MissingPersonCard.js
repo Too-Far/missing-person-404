@@ -47,7 +47,7 @@ function MissingPersonCard(props){
           <h2>Or Call the National Center For Missing & Exploited Children:</h2>
           <a href='tel:1-800-843-5678'><h3>1-800-THE-LOST</h3></a>
           </div>
-          <Button className={classes.infoBtn} href={link} color='secondary' variant='outlined'>More Information</Button>
+          <Button className={classes.infoBtn} href={link} color='secondary' variant='outlined' style={{backgroundColor: props.color, color: props.btnTxtColor}}>More Information</Button>
           </div>
         </div>
     )

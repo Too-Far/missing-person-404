@@ -50,41 +50,52 @@ import MissingPersonCard from './components/MissingPersonCard'
     }
   }))
 
-function PageNotFound () {
+function PageNotFound ({child, color, btnColor, btnTxtColor}) {
   const classes = useStyles()
   const [random, setRandom] = useState(Math.floor((Math.random() * 325) +1))
   const [show, setShow] = useState(random + 2)
   const [data, setData] = useState([])
+  const [childList, setChildList] = useState([])
 
   useEffect(()=>{
     axios.get('https://missingpersonapi.herokuapp.com/missingperson/').then(
       res=>{
         setData(Array.from(res.data))
-      }
+          }
     ).catch( err => alert(err))
   }, []);
-
-
   const handleClick=(()=>{
     setShow(show + 2)
+  })
+  let childData = []
+  data.map(i=>{
+    let age = parseInt(i.age_when_missing, 10)
+    if (age <= 18){
+      childData.push(i)
+    }
   })
 
     return (
       <ThemeProvider theme={theme}>
       <CssBaseline/>
       <div className={classes.wrapper}>
-          <div className={classes.header}>
+          <div className={classes.header} style={{backgroundColor: color}}>
             <h1>MISSING PERSONS</h1>
             <h4>You have reached this page because the page you are looking for does not exist. Instead of giving you  the standard error page, we thought we would use this opportunity to show you some mising persons in the hope that you may have seen one. Every set of eyes helps bring them home!</h4>
           </div>
           <div className={classes.cardContainer}>
-            {data.slice(random ,show).map(item =>
+          {child === 'true' ? 
+            childData.slice(random, show).map(item =>
             <div className={classes.missingCard}>
-            <Paper elevation='20'><MissingPersonCard key={item.id_number} data={item}/>
+            <Paper elevation='20'><MissingPersonCard key={item.id_number} color={btnColor} btnTxtColor={btnTxtColor} data={item}/>
+            </Paper> </div>) : 
+            data.slice(random ,show).map(item =>
+            <div className={classes.missingCard}>
+            <Paper elevation='20'><MissingPersonCard key={item.id_number} color={btnColor} btnTxtColor={btnTxtColor} data={item}/>
             </Paper> </div>)}
           </div>
           <div className={classes.moreBtn}>
-      <Button variant='contained' onClick={handleClick} color='primary'>Want to See More?</Button>
+      <Button variant='contained' onClick={handleClick} color='primary' style={{backgroundColor: btnColor, color:btnTxtColor}}>Want to See More?</Button>
       </div>
     </div>
     </ThemeProvider>

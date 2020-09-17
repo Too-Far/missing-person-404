@@ -16,7 +16,6 @@ npm install --save missing-person
 import React, { Component } from 'react'
 
 import PageNotFound from 'missing-person'
-import 'missing-person/dist/index.css'
 
 class Example extends Component {
   render() {
@@ -24,6 +23,21 @@ class Example extends Component {
   }
 }
 ```
+
+## Customizable features:
+  To change the background color of the header, buttons and button text:
+    ```jsx
+    <PageNotFound color='desired color value here' btnColor='purple' btnTxtColor='hot pink'>
+    ```
+## Coming Soon!
+
+  To change search parameters to return children under the age of 18:
+  ```jsx
+  <PageNotFound child='true'>
+  ```
+  **Note that you must pass true as a string**
+
+  The API will return 500 randomized records. The records are further randomized on the front end. 
 ## For any issues, or for feature requests please reach out to me:
 
 [rdturner40@gmail.com](mailto:rdturner40@gmail.com)
