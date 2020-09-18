@@ -35,7 +35,6 @@ import MissingPersonCard from './components/MissingPersonCard'
     },
     moreBtn: {
       position: 'sticky',
-      position: '-webkit-sticky',
       bottom: '3rem',
       alignSelf: 'flex-end',
       justifySelf: 'center'
